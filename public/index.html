@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dathkaine Forum RPG</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="accountBar" class="account-bar panel">
+    <div id="loggedOut"><input id="authName" placeholder="Username" maxlength="30"><input id="authPass" type="password" placeholder="Password"><button id="loginBtn">Login</button><button id="registerBtn">Register</button></div>
+    <div id="loggedIn" hidden>Wayfarer: <strong id="who"></strong> <button id="logoutBtn">Logout</button></div>
+  </div>
+  <div class="cracks cracks-a"></div><div class="cracks cracks-b"></div>
+  <header class="hero">
+    <p class="eyebrow">Terrakron Online Archive</p>
+    <h1>DATHKAINE</h1>
+    <p class="subtitle">A living forum RPG of guilds, races, ruins, war and uncapped progression</p>
+    <nav><a href="#world">World</a><a href="#races">Races</a><a href="#guilds">Guilds</a><a href="#archives">Archives</a><a href="#community">Community</a></nav>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar panel">
+      <h2>Wayfinder</h2>
+      <a href="#world">World Lore</a><a href="#races">Race Codex</a><a href="#guilds">Guild Halls</a><a href="#combat">Battle Grounds</a><a href="#archives">Restricted Archives</a><a href="#community">Community</a>
+      <div class="status"><span>Realm Status</span><strong>ONLINE</strong></div>
+      <div class="status"><span>Progression</span><strong>UNCAPPED</strong></div>
+    </aside>
+
+    <section class="content">
+      <article class="welcome panel" id="forumHome">
+        <div><p class="kicker">Welcome, Nyzik wayfarer</p><h2>The Forum Is Part of the World</h2><p>Every board is written as a place, archive, faction hall or active frontier. Discussions, character records, guild projects, quests and battles can all live inside the same persistent world.</p></div>
+        <button id="glowButton">Awaken the Cracks</button>
+      </article>
+
+      <section id="world" class="forum-section">
+        <h2 class="section-title">World of Dathkaine</h2>
+        <div class="board-grid">
+          <article class="board"><div class="sigil">01</div><div><h3>The Scrolls of Dathkaine</h3><p>The central lore board for creation records, regional histories, sacred writings, lost kingdoms and the events shaping Dathkaine within the Terrakron Universe.</p><small>Lore • Canon • World history</small></div></article>
+          <article class="board"><div class="sigil">02</div><div><h3>Terrakron Prime</h3><p>Records concerning the colossal constructed universe, its worlds and megastructures, and the Aeythians who built rather than merely observed its systems.</p><small>Cosmology • Builders • Megastructures</small></div></article>
+          <article class="board"><div class="sigil">03</div><div><h3>The Battle Maze</h3><p>A war-world reshaped by the Battle Forger. Champions endure an immortal cycle of conflict while the Maze changes beneath their rival domains.</p><small>Champions • Arenas • Battle chronicles</small></div></article>
+          <article class="board"><div class="sigil">04</div><div><h3>Blood-Reach Pines</h3><p>A sealed frontier where the forest bleeds, remembers and answers experimentation. Case files cover root-memory, altered wildlife, old laboratories and the shadow of Ackham University.</p><small>Horror • Case files • Restricted expeditions</small></div></article>
+        </div>
+      </section>
+
+      <section id="races" class="forum-section">
+        <h2 class="section-title">Race and Species Codex</h2>
+        <div class="board-grid">
+          <article class="board featured"><div class="sigil">N</div><div><h3>The Nyzik</h3><p>The core people and language of Dathkaine. Use this board for Nyzik culture, clans, naming, everyday speech, rites, characters and canon language notes. Player characters remain Nyzik by default unless a campaign board states otherwise.</p><small>Core playable people • Language • Culture</small></div></article>
+          <article class="board"><div class="sigil">R</div><div><h3>Species Compendium</h3><p>An archive for established Terrakron species, altered peoples, alien life, eldritch forms, were-creatures, hybrids and other beings encountered across connected worlds.</p><small>Species records • Biology • Traits</small></div></article>
+          <article class="board"><div class="sigil">M</div><div><h3>Morphisms and Transformations</h3><p>Studies of transformations, hybrid states, inherited anomalies, magical alterations and the boundaries between species and forms.</p><small>Forms • Transformations • Research</small></div></article>
+        </div>
+      </section>
+
+      <section id="guilds" class="forum-section">
+        <h2 class="section-title">Guild Dominion</h2>
+        <div class="board-grid">
+          <article class="board featured"><div class="sigil">G</div><div><h3>Guild Registry</h3><p>Create a guild, publish its charter, recruit members, declare its identity and maintain a permanent public record of officers, alliances and rivalries.</p><small>Creation • Recruitment • Diplomacy</small></div></article>
+          <article class="board"><div class="sigil">H</div><div><h3>Guild Hall and Buildings</h3><p>Plan halls, temples, treasuries, research buildings, defenses and territory structures. Building upgrades provide meaningful bonuses and have no final progression cap.</p><small>Buildings • Bonuses • Construction</small></div></article>
+          <article class="board"><div class="sigil">T</div><div><h3>Treasury and Trade Contributions</h3><p>Track donated gold, wood, stone, iron, gems and harvested materials used to fund guild projects, boss encounters, defenses and shared advancement.</p><small>Resources • Taxes • Trade skills</small></div></article>
+          <article class="board"><div class="sigil">B</div><div><h3>Guild Boss War Room</h3><p>Organize long-form guild boss battles, assign roles, fund encounters, publish tactics and record rewards, event points and victories.</p><small>Bosses • Strategy • Event rewards</small></div></article>
+          <article class="board"><div class="sigil">S</div><div><h3>Research and Skill Trees</h3><p>Guild research unlocks combat skills, harvesting improvements, permanent benefits and new branches of collective advancement.</p><small>Research • Skills • Uncapped growth</small></div></article>
+          <article class="board"><div class="sigil">D</div><div><h3>Territories and Defense</h3><p>Claim territory, post patrols, manage defenses, issue territory quests and report invasions or contested borders.</p><small>Territory • Defense • Guild quests</small></div></article>
+        </div>
+      </section>
+
+      <section id="combat" class="forum-section">
+        <h2 class="section-title">Adventure and Conflict</h2>
+        <div class="board-grid">
+          <article class="board"><div class="sigil">⚔</div><div><h3>Manual and Endless Hunts</h3><p>Post encounters, select creatures and choose a single manual fight or an ongoing automated hunt until recalled.</p><small>Combat • Auto battle • Creature lists</small></div></article>
+          <article class="board"><div class="sigil">⌁</div><div><h3>Dungeons and Region Gates</h3><p>Form parties, explore dungeons and document boss-gated routes, discoveries, hazards and unique rewards.</p><small>Travel • Dungeons • Unlocks</small></div></article>
+          <article class="board"><div class="sigil">◈</div><div><h3>Area Boss Events</h3><p>Coordinate recurring realm threats and world bosses, then record event-point rewards and the changing state of each region.</p><small>Events • World bosses • Rewards</small></div></article>
+        </div>
+      </section>
+
+      <section id="archives" class="forum-section">
+        <h2 class="section-title">Restricted Archives</h2>
+        <div class="board-grid">
+          <article class="board"><div class="sigil">A</div><div><h3>Aeythian Construction Records</h3><p>Theories, recovered plans and dangerous repair caches tied to the builders of Terrakron Prime and their world-scale machinery.</p><small>Ancient technology • Caches • Resets</small></div></article>
+          <article class="board"><div class="sigil">C</div><div><h3>Cosmological Atlas</h3><p>World maps, shard atlases, realms, rifts, planetary structures and the routes that bind the wider setting together.</p><small>Maps • Realms • Cosmology</small></div></article>
+          <article class="board"><div class="sigil">X</div><div><h3>Case Files and Sealed Reports</h3><p>Old investigations, quarantine records, underground facilities, hidden experiments and unresolved incidents.</p><small>Documents • Investigations • Horror</small></div></article>
+        </div>
+      </section>
+
+      <section id="community" class="forum-section">
+        <h2 class="section-title">Community</h2>
+        <div class="board-grid">
+          <article class="board"><div class="sigil">+</div><div><h3>New Wayfarers</h3><p>Introductions, getting started, character setup and help learning the forum RPG.</p><small>Introductions • Help • Guides</small></div></article>
+          <article class="board"><div class="sigil">#</div><div><h3>General Tavern</h3><p>Open conversation, player stories, screenshots, ideas and community talk outside active canon threads.</p><small>Discussion • Social • Ideas</small></div></article>
+          <article class="board"><div class="sigil">!</div><div><h3>Announcements and Canon Updates</h3><p>Official notices, event schedules, revisions and clear records showing what has entered established canon.</p><small>Official • Updates • Canon control</small></div></article>
+        </div>
+      </section>
+    </section>
+  </main>
+  <footer>THE DATHKAINE ARCHIVE • SILVER IN DARKNESS • GREEN THROUGH THE FRACTURE</footer>
+  <section id="adminDashboard" class="panel admin-dashboard" hidden><div class="dash-head"><div><p class="kicker">Restricted Administration</p><h2>Admin Dashboard</h2></div><button id="refreshDash">Refresh Dashboard</button></div><div class="stat-grid"><div class="stat"><span>Users</span><strong id="statUsers">0</strong></div><div class="stat"><span>Admins</span><strong id="statAdmins">0</strong></div><div class="stat"><span>Moderators</span><strong id="statMods">0</strong></div><div class="stat"><span>Members</span><strong id="statMembers">0</strong></div><div class="stat"><span>Threads</span><strong id="statThreads">0</strong></div><div class="stat"><span>Replies</span><strong id="statReplies">0</strong></div><div class="stat"><span>Locked</span><strong id="statLocked">0</strong></div><div class="stat"><span>Pinned</span><strong id="statPinned">0</strong></div></div><h3>Account Management</h3><div id="dashboardUsers"></div></section><script src="forum.js"></script>
+</body>
+</html>
