@@ -7,6 +7,11 @@ const crypto=require('crypto');
 const fs=require('fs');
 const path=require('path');
 const app=express(); const PORT=process.env.PORT||3001; const DB=path.join(__dirname,'data','forum.json');
+fs.mkdirSync(path.dirname(DB), { recursive: true });
+
+if (!fs.existsSync(DB)) {
+  fs.writeFileSync(DB, JSON.stringify({ users: [], threads: [] }, null, 2));
+}
 const read=()=>{try{const d=JSON.parse(fs.readFileSync(DB,'utf8'));d.users||=[];d.threads||=[];return d}catch{return {users:[],threads:[]}}};
 const write=d=>fs.writeFileSync(DB,JSON.stringify(d,null,2)); const clean=(v,n)=>String(v||'').trim().slice(0,n);
 app.use(express.json({limit:'256kb'})); app.use(session({secret:process.env.SESSION_SECRET||'change-this-before-public-deployment',resave:false,saveUninitialized:false,cookie:{httpOnly:true,sameSite:'lax',maxAge:604800000}})); app.use(express.static(path.join(__dirname,'public')));
