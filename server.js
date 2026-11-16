@@ -1,4 +1,6 @@
-const express=require('express');
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Dathkaine Forum running on port ${PORT}`);
+});nst express=require('express');
 const session=require('express-session');
 const bcrypt=require('bcryptjs');
 const crypto=require('crypto');
@@ -25,4 +27,6 @@ app.post('/api/threads/:id/replies',auth,(q,r)=>{const d=read(),t=d.threads.find
 app.patch('/api/threads/:id',auth,staff,(q,r)=>{const d=read(),t=d.threads.find(x=>x.id===q.params.id&&!x.deleted);if(!t)return r.status(404).json({error:'Thread not found.'});if(typeof q.body.locked==='boolean')t.locked=q.body.locked;if(typeof q.body.pinned==='boolean')t.pinned=q.body.pinned;write(d);r.json(t)});
 app.delete('/api/threads/:id',auth,staff,(q,r)=>{const d=read(),t=d.threads.find(x=>x.id===q.params.id&&!x.deleted);if(!t)return r.status(404).json({error:'Thread not found.'});t.deleted=true;write(d);r.json({ok:true})});
 app.delete('/api/threads/:tid/replies/:rid',auth,staff,(q,r)=>{const d=read(),t=d.threads.find(x=>x.id===q.params.tid&&!x.deleted);if(!t)return r.status(404).json({error:'Thread not found.'});const x=(t.replies||[]).find(y=>y.id===q.params.rid&&!y.deleted);if(!x)return r.status(404).json({error:'Reply not found.'});x.deleted=true;write(d);r.json({ok:true})});
-app.listen(PORT,()=>console.log(`Dathkaine Forum running at http://localhost:${PORT}`));
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Dathkaine Forum running on port ${PORT}`);
+});
