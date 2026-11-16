@@ -92,6 +92,50 @@
       </section>
     </section>
   </main>
+<section id="forumControls" class="panel">
+  <h2>Dathkaine Community Forum</h2>
+
+  <p id="loginHint">Log in or register above to create threads and replies.</p>
+
+  <form id="threadForm" hidden>
+    <h3>Create New Thread</h3>
+
+    <input
+      id="threadTitle"
+      type="text"
+      placeholder="Thread title"
+      maxlength="120"
+      required
+    >
+
+    <input
+      id="threadBoard"
+      type="text"
+      placeholder="Board"
+      maxlength="60"
+    >
+
+    <textarea
+      id="threadBody"
+      placeholder="Write your message..."
+      required
+    ></textarea>
+
+    <button type="submit">Create Thread</button>
+  </form>
+
+  <div id="threads"></div>
+
+  <section id="staffPanel" class="panel" hidden>
+    <h3>Staff Controls</h3>
+    <p id="roleLabel"></p>
+
+    <section id="adminUsers" hidden>
+      <h3>User Management</h3>
+      <div id="userList"></div>
+    </section>
+  </section>
+</section>
   <footer>THE DATHKAINE ARCHIVE • SILVER IN DARKNESS • GREEN THROUGH THE FRACTURE</footer>
   <section id="adminDashboard" class="panel admin-dashboard" hidden><div class="dash-head"><div><p class="kicker">Restricted Administration</p><h2>Admin Dashboard</h2></div><button id="refreshDash">Refresh Dashboard</button></div><div class="stat-grid"><div class="stat"><span>Users</span><strong id="statUsers">0</strong></div><div class="stat"><span>Admins</span><strong id="statAdmins">0</strong></div><div class="stat"><span>Moderators</span><strong id="statMods">0</strong></div><div class="stat"><span>Members</span><strong id="statMembers">0</strong></div><div class="stat"><span>Threads</span><strong id="statThreads">0</strong></div><div class="stat"><span>Replies</span><strong id="statReplies">0</strong></div><div class="stat"><span>Locked</span><strong id="statLocked">0</strong></div><div class="stat"><span>Pinned</span><strong id="statPinned">0</strong></div></div><h3>Account Management</h3><div id="dashboardUsers"></div></section><script src="forum.js"></script>
 </body>
