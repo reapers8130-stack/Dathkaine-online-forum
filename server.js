@@ -1,6 +1,6 @@
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Dathkaine Forum running on port ${PORT}`);
-});const express=require('express');
+
+  
+const express=require('express');
 const session=require('express-session');
 const bcrypt=require('bcryptjs');
 const crypto=require('crypto');
