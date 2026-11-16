@@ -95,47 +95,105 @@
 <section id="forumControls" class="panel">
   <h2>Dathkaine Community Forum</h2>
 
-  <p id="loginHint">Log in or register above to create threads and replies.</p>
+  <p id="loginHint">
+    Log in or register above to create posts and reply to other wayfarers.
+  </p>
 
   <form id="threadForm" hidden>
-    <h3>Create New Thread</h3>
+    <h3>Create New Post</h3>
 
+    <label for="threadBoard">Choose Board</label>
+    <select id="threadBoard" required>
+      <option value="">-- Choose where this post belongs --</option>
+      <option value="The Scrolls of Dathkaine">The Scrolls of Dathkaine</option>
+      <option value="Terrakron Prime">Terrakron Prime</option>
+      <option value="The Battle Maze">The Battle Maze</option>
+      <option value="Blood-Reach Pines">Blood-Reach Pines</option>
+      <option value="The Nyzik">The Nyzik</option>
+      <option value="Species Compendium">Species Compendium</option>
+      <option value="Guild Registry">Guild Registry</option>
+      <option value="Guild Hall and Buildings">Guild Hall and Buildings</option>
+      <option value="Guild Boss War Room">Guild Boss War Room</option>
+      <option value="Research and Skill Trees">Research and Skill Trees</option>
+      <option value="Territories and Defense">Territories and Defense</option>
+      <option value="Manual and Endless Hunts">Manual and Endless Hunts</option>
+      <option value="Dungeons and Region Gates">Dungeons and Region Gates</option>
+      <option value="Area Boss Events">Area Boss Events</option>
+      <option value="Restricted Archives">Restricted Archives</option>
+      <option value="New Wayfarers">New Wayfarers</option>
+      <option value="General Tavern">General Tavern</option>
+      <option value="Announcements and Canon Updates">Announcements and Canon Updates</option>
+    </select>
+
+    <label for="threadTitle">Post Title</label>
     <input
       id="threadTitle"
       type="text"
-      placeholder="Thread title"
+      placeholder="Enter the title of your post"
       maxlength="120"
       required
     >
 
-    <input
-      id="threadBoard"
-      type="text"
-      placeholder="Board"
-      maxlength="60"
-    >
-
+    <label for="threadBody">Message</label>
     <textarea
       id="threadBody"
-      placeholder="Write your message..."
+      placeholder="Write your post here..."
+      rows="8"
       required
     ></textarea>
 
-    <button type="submit">Create Thread</button>
+    <button type="submit">Publish Post</button>
   </form>
 
-  <div id="threads"></div>
+  <section class="forum-posts">
+    <h3>Recent Posts</h3>
+    <p>Posts will appear below with their board, author, title, message, replies, and moderation controls.</p>
+    <div id="threads"></div>
 
   <section id="staffPanel" class="panel" hidden>
     <h3>Staff Controls</h3>
     <p id="roleLabel"></p>
-
     <section id="adminUsers" hidden>
       <h3>User Management</h3>
-      <div id="userList"></div>
+   <div id="userList"></div>
+ </section>
+</section><dialog id="articleReader" class="article-reader">
+  <div class="article-reader-inner">
+
+    <div class="article-reader-header">
+      <div>
+        <p id="readerBoard" class="reader-board"></p>
+        <h2 id="readerTitle">Thread Title</h2>
+        <p id="readerMeta" class="reader-meta"></p>
+      </div>
+
+      <button id="closeReader" type="button" autofocus>
+        Back to Board
+      </button>
+    </div>
+
+    <article id="readerBody" class="reader-body"></article>
+
+    <section class="reader-replies">
+      <h3>Replies</h3>
+      <div id="readerReplies"></div>
     </section>
-  </section>
+
+    <form id="readerReplyForm" hidden>
+      <label for="readerReply">Write a Reply</label>
+      <textarea
+        id="readerReply"
+        rows="6"
+        placeholder="Write your reply..."
+        required
+      ></textarea>
+
+      <button type="submit">Post Reply</button>
+    </form>
+  </div>
 </section>
+</section>
+</dialog>
   <footer>THE DATHKAINE ARCHIVE • SILVER IN DARKNESS • GREEN THROUGH THE FRACTURE</footer>
   <section id="adminDashboard" class="panel admin-dashboard" hidden><div class="dash-head"><div><p class="kicker">Restricted Administration</p><h2>Admin Dashboard</h2></div><button id="refreshDash">Refresh Dashboard</button></div><div class="stat-grid"><div class="stat"><span>Users</span><strong id="statUsers">0</strong></div><div class="stat"><span>Admins</span><strong id="statAdmins">0</strong></div><div class="stat"><span>Moderators</span><strong id="statMods">0</strong></div><div class="stat"><span>Members</span><strong id="statMembers">0</strong></div><div class="stat"><span>Threads</span><strong id="statThreads">0</strong></div><div class="stat"><span>Replies</span><strong id="statReplies">0</strong></div><div class="stat"><span>Locked</span><strong id="statLocked">0</strong></div><div class="stat"><span>Pinned</span><strong id="statPinned">0</strong></div></div><h3>Account Management</h3><div id="dashboardUsers"></div></section><script src="forum.js"></script>
 </body>
